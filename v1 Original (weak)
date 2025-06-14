@@ -1,9 +1,0 @@
-def jayden_hash(data: str) -> int:
-    hash_val = 0xABCDEF  # Starting constant
-    for i, char in enumerate(data):
-        hash_val ^= (ord(char) << (i % 8))
-        hash_val = (hash_val * 0x45D9F3B) & 0xFFFFFFFFFFFFFFFF
-    return hash_val
-
-# You need to print the result like this:
-print(jayden_hash("hello world"))
