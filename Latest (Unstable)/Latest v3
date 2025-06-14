@@ -1,0 +1,17 @@
+import random
+import string
+
+def jayden_super_hash(password):
+    # Use the password to seed the random generator (deterministic hash)
+    random.seed(password)
+
+    # Use a wide character set: A-Z, a-z, 0-9, symbols
+    chars = string.ascii_letters + string.digits + string.punctuation
+
+    # Generate a 256-character hash string
+    return ''.join(random.choice(chars) for _ in range(256))
+
+# 🔐 Try it
+user_input = input("Enter password to hash: ")
+hashed = jayden_super_hash(user_input)
+print(f"\n🔒 Jayden-2048 (256-char) Hash:\n{hashed}")
