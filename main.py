@@ -1,6 +1,6 @@
 import struct
 
-def jayden_hash_ultra(data: str) -> str:
+def bradley_jayden_hash_ultra(data: str) -> str:
     # Convert to bytes
     data_bytes = data.encode('utf-8')
 
@@ -30,8 +30,8 @@ def jayden_hash_ultra(data: str) -> str:
     # Combine into a final hash string
     final_hash = f"{state[0]:016X}{state[1]:016X}"
     return final_hash
-    
-password = "Password Test 12345"
-hashed = jayden_hash_ultra(password)
-print("Password:", password)
-print("JHA-64:", hashed)
+if __name__ = "__main__":    
+    password = input("Password to hash --->")
+    hashed = jayden_hash_ultra(password)
+    print("Password:", password)
+    print("JHA-64:", hashed)
